@@ -23,9 +23,6 @@ module Spree
           variant = Spree::Variant.find(permitted_resource_params[:variant_id])
           original_stock_location = Spree::StockLocation.find(permitted_resource_params[:original_stock_location_id])
           @reserved_stock_item = Spree::Stock::Reserver.new(variant, @user, original_stock_location).reserve(
-            variant,
-            original_stock_location,
-            @user,
             permitted_resource_params[:quantity].to_i,
             Time.zone.parse(permitted_resource_params[:expires_at])
           )
