@@ -24,7 +24,7 @@ module Spree
 
     belongs_to :user, class_name: Spree::UserClassHandle.new
 
-    belongs_to :original_stock_location, class_name: Spree::StockLocation
+    belongs_to :original_stock_location, class_name: 'Spree::StockLocation'
 
     # Remove 'variant_id' attribute from its existing uniqueness validator
     # (effectively disabling it) so we can add a new uniqueness validator that
