@@ -34,9 +34,9 @@ can be stored with an expiry date for the reservation.
 
   s.has_rdoc = false
 
-  s.add_runtime_dependency "solidus_api", "~> 2.0"
-  s.add_runtime_dependency "solidus_backend", "~> 2.0"
-  s.add_runtime_dependency "solidus_core", "~> 2.0"
+  s.add_runtime_dependency "solidus_api", "< 3.0"
+  s.add_runtime_dependency "solidus_backend", "< 3.0"
+  s.add_runtime_dependency "solidus_core", "< 3.0"
   s.add_runtime_dependency "deface", "~> 1.0"
 
   s.add_development_dependency "awesome_print"
