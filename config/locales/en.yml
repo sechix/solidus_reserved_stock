@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    models:
+      spree/reserved_stock_item:
+        one: Reserved Stock Item
+        other: Reserved Stock Items
+  spree:
+    admin:
+      user:
+        reserved_stock_items: Reserved Stock Items
+      reserved_stock_item:
+        back_to_user_list: Back to user list
+        back_to_reserved_stock_item_list: Back to reserved stock item list
+        new: New reserved stock item
+        original_stock_location: Original stock location
+        select_an_original_stock_location: Select an original stock location
+        unable_to_create: Unable to reserve stock
+    quantity_must_be_positive: Quantity must be positive
+    no_stock_reserved_for_user_and_variant: User does not have any reserved stock for that variant
+    insufficient_stock_available: Insufficient stock available
+    insufficient_reserved_stock_available: Insufficient reserved stock available
+    new_reserved_stock_item: New reserved stock item
+    successfully_restocked: Successfully restocked
+    user_id_required_for_reserved_stock_location: user_id is required to retrieve a stock item for a reserved stock location
+    original_stock_location_id_required_for_reserved_stock_location: original_stock_location_id is required to retrieve a stock item for a reserved stock location
