@@ -27,7 +27,7 @@ module Spree
             @original_stock_location,
             expires_at
           )
-          reserved_stock_item.stock_movements.create!(quantity: quantity, originator: nil)
+          reserved_stock_item.stock_movements.create!(quantity: quantity)
           @original_stock_location.unstock(@variant, quantity)
           reserve_parts(quantity, expires_at) if using_solidus_product_assembly?
           reserved_stock_item
