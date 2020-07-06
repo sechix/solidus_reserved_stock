@@ -9,3 +9,11 @@
 /spec/reports/
 /tmp/
 /spec/dummy/
+.idea/.generators
+.idea/.rakeTasks
+.idea/encodings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/solidus_reserved_stock.iml
+.idea/vcs.xml
+.idea/workspace.xml
