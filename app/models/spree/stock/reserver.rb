@@ -27,7 +27,7 @@ module Spree
             @original_stock_location,
             expires_at
           )
-          reserved_stock_item.stock_movements.create!(quantity: quantity)
+          reserved_stock_item.stock_movements.create!(quantity: quantity, originator: nil)
           @original_stock_location.unstock(@variant, quantity)
           reserve_parts(quantity, expires_at) if using_solidus_product_assembly?
           reserved_stock_item
@@ -68,7 +68,7 @@ module Spree
         @reserved_stock_location.unstock(
           variant, quantity, nil, user, original_stock_location
         )
-        original_stock_location.move(variant, quantity)
+        original_stock_location.move(variant, quantity, originator)
         reserved_stock_item.reload
         reserved_stock_item.destroy if reserved_stock_item.count_on_hand == 0
         reserved_stock_item
