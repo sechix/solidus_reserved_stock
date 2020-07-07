@@ -68,7 +68,7 @@ module Spree
         @reserved_stock_location.unstock(
           variant, quantity, nil, user, original_stock_location
         )
-        original_stock_location.move(variant, quantity, originator)
+        original_stock_location.move(variant, quantity, nil)
         reserved_stock_item.reload
         reserved_stock_item.destroy if reserved_stock_item.count_on_hand == 0
         reserved_stock_item
