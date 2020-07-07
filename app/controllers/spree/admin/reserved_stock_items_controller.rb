@@ -40,7 +40,7 @@ module Spree
       def restock
         reserved_stock_item = Spree::ReservedStockItem.find(params[:id])
         variant = reserved_stock_item.variant
-        Spree::Stock::Reserver.new(variant, @user, reserved_stock_item.original_stock_location).restock(variant, @user)
+        Spree::Stock::Reserver.new(variant, @user, reserved_stock_item.original_stock_location).restock
         flash[:success] = flash_message_for(@reserved_stock_item, :successfully_restocked)
         redirect_to admin_user_reserved_stock_items_path(@user)
       rescue => e
